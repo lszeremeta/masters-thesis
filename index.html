@@ -1,0 +1,205 @@
+<!doctype html>
+<!--
+  Copyright (C) 2017 Łukasz Szeremeta. All rights reserved.
+  based on Google Inc. template licensed under the Apache License, Version 2.0 (the "License");
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Praca omawia zagadnienia związane z Semantycznym Internetem i Danymi Połączonymi, a także prezentuje RTriples - kompletny magazyn grafów RDF.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mapowanie grafów RDF na grafy właściwości - Master's Thesis - Łukasz Szeremeta 2017</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/material.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="mdl-thesis mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" vocab="http://schema.org/" typeof="Thesis">
+            <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+                <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                </div>
+                <div class="mdl-layout__header-row">
+                    <h3>Mapowanie grafów RDF na grafy właściwości</h3>
+                    <a href="https://bit.ly/szeremeta-thesis-2017" class="mdl-layout--large-screen-only mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" property="url" id="download">
+                        <i class="material-icons">file_download</i>
+                        <span class="visuallyhidden">Mapowanie grafów RDF na grafy właściwości - download PDF</span>
+                    </a>
+                    <a href="https://bit.ly/szeremeta-thesis-2017" class="mdl-layout--small-screen-only mdl-button mdl-js-button mdl-button--mini--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" property="url" id="download-mobile">
+                        <i class="material-icons">file_download</i>
+                        <span class="visuallyhidden">Mapowanie grafów RDF na grafy właściwości - download PDF</span>
+                    </a>
+                    <div class="mdl-tooltip" for="download">
+                        Download PDF
+                    </div>
+                    <div class="mdl-tooltip" for="download-mobile">
+                        Download PDF
+                    </div>
+                </div>
+                <div class="mdl-layout--large-screen-only mdl-layout__header-row" vocab="http://schema.org/" typeof="Person">
+                    <p><img src="images/lukasz-szeremeta.jpg" class="photo" property="image" alt="Łukasz Szeremeta"/> <span property="givenName">Łukasz</span> <span property="familyName">Szeremeta</span> 2017</p>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <div class="mdl-layout__tab-panel is-active" id="overview">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+                            <i class="material-icons">perm_identity</i>
+                        </header>
+                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone" vocab="http://schema.org/" typeof="Person">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Author</h4>
+                                Copyright &copy; 2017 <span property="givenName">Łukasz</span> <span property="familyName">Szeremeta</span></br>
+                                All rights reserved.
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a href="https://plus.google.com/+%C5%81ukaszSzeremeta" target="_blank" class="mdl-button" property="sameAs"><i class="material-icons">supervisor_account</i> Google+</a>
+                                <a href="https://github.com/lszeremeta" target="_blank" class="mdl-button" property="sameAs"><i class="material-icons">code</i> GitHub</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                                <h4 class="mdl-cell mdl-cell--12-col">Master's Thesis details</h4>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>Title in Polish</h5>
+                                    <span property="name" xml:lang="pl" lang="pl">Mapowanie grafów RDF na grafy właściwości</span>
+                                </div>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>Title in English</h5>
+                                    <span property="name" xml:lang="en" lang="en">Mapping RDF graphs into property graphs</span>
+                                </div>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>Field of study</h5>
+                                    <span property="inSupportOf" xml:lang="en" lang="en">Computer Science</span> (<span property="inSupportOf" xml:lang="pl" lang="pl">Informatyka</span>)
+                                </div>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>School</h5>
+                                    <span property="sourceOrganization" xml:lang="en" lang="en">University of Bialystok</span> (<span property="sourceOrganization" xml:lang="pl" lang="pl">Uniwersytet w Białymstoku</span>)
+                                </div>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>Author</h5>
+                                    <span property="author">Łukasz Szeremeta</span> <span property="copyrightYear" datatype="xsd:gYear">2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Streszczenie</h4>
+                                <span property="description" xml:lang="pl" lang="pl">
+                                    Obecny internet zdecydowanie nie jest tym, czym był na początku. Z medium do wymiany dokumentów przekształcił się w narzędzie praktycznie do wszystkiego – komunikacji na żywo, zakupów czy pracy zdalnej. Wiele usług internetowych wykorzystuje jeden z modeli przechowywania danych grafowych – Resource Description Framework (RDF) i grafy właściwości (ang. property graphs). Pierwszy z nich wykorzystywany jest m.in. w bazach wiedzy, czyli zbiory zawierające logicznie powiązane informacje z danych dziedzin. Drugi natomiast, m.in w systemach wielu instytucji finansowych do wczesnego wykrywania nadużyć, serwisach społecznościowych oraz transporcie lotniczym. Przy lawinowo rosnącej ilości danych, pogodzenie obu tych „światów”, wydaje się być niezwykle istotne. W pracy zostaną omówione zagadnienia związane z obydwoma modelami: serializacje, języki zapytań, przegląd magazynów i baz danych. Zaprezentowane zostaną również metody i algorytmy transformacji oraz kompletne rozwiązanie łączące te dwie koncepcje.
+                                </span>
+                                <h5>Słowa kluczowe</h5>
+                                <span property="keywords" xml:lang="pl" lang="pl">
+                                    Semantyczny Internet, <abbr title="Resource Description Framework">RDF</abbr>, <abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr>, grafy właściwości, bazy danych, serializacja danych, NoSQL
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Abstract</h4>
+                                <span property="description" xml:lang="en" lang="en">
+                                    The current internet is definitely different from the initial original. From the medium of exchange documents it has transformed into a tool for live communication, shopping, remote work and others. Many web services use graph models – Resource Description Framework (RDF) or property graphs. The first one is used e.g. in knowledge bases – collections, which contain logically related information. The second one is used e.g. in the systems of many financial institutions for early abuse detection, on social networking services, and for civil aviation. With the rapidly growing amount of data, dealing with both of these “worlds”, seems to be extremely important. This work will cover issues related to both models such as serializations, query languages, graph stores and databases overview. The methods and transformation algorithms with a complete solution combining these two concepts will be also presented.
+                                </span>
+                                <h5>Keywords</h5>
+                                <span property="keywords" xml:lang="en" lang="en">
+                                    Semantic Web, <abbr title="Resource Description Framework">RDF</abbr>, <abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr>, property graph, databases, data serializations, NoSQL
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+                            <i class="material-icons">label</i>
+                        </header>
+                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+                            <div class="mdl-card__supporting-text">
+                                <h4>BibTeX</h4>
+                                <pre>@mastersthesis{Szeremeta:Thesis:2017,
+	address = "Poland",
+	author = "Szeremeta, {\L}ukasz",
+	note = "\url{https://bit.ly/szeremeta-thesis-2017}",
+	school = "University of Bialystok",
+	title = "{Mapowanie graf{\'o}w RDF na grafy w{\l}a{\'s}ciwo{\'s}ci}",
+	year = "2017"
+}</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section--footer mdl-color--white mdl-grid">
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                            <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+                        </div>
+                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <h5>neo4j-sparql-extension-yars</h5>
+                            Neo4j unmanaged extension for RDF storage and SPARQL 1.1 query features with support for YARS serialization
+                            <div class="mdl-card__actions repo-links">
+                                <a href="https://github.com/lszeremeta/neo4j-sparql-extension-yars" target="_blank" class="mdl-button"><i class="material-icons">code</i> See on GitHub</a>
+                            </div>
+                        </div>
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                            <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+                        </div>
+                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <h5>sesame-rio-yars</h5>
+                            Yet Another RDF Serialization (YARS) serialization parser for Sesame
+                            <div class="mdl-card__actions repo-links">
+                                <a href="https://github.com/lszeremeta/sesame-rio-yars" target="_blank" class="mdl-button"><i class="material-icons">code</i> See on GitHub</a>
+                            </div>
+                        </div>
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                            <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+                        </div>
+                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <h5>sesame-rio-api</h5>
+                            Modified Sesame API with added support for Yet Another RDF Serialization (YARS) serialization
+                            <div class="mdl-card__actions repo-links">
+                                <a href="https://github.com/lszeremeta/sesame-rio-api" target="_blank" class="mdl-button"><i class="material-icons">code</i> See on GitHub</a>
+                            </div>
+                        </div>
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                            <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+                        </div>
+                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <h5>ttl-to-yars</h5>
+                            Simple Turtle to Yet Another RDF Serialization (YARS) serialization converter written in Python
+                            <div class="mdl-card__actions repo-links">
+                                <a href="https://github.com/lszeremeta/ttl-to-yars" target="_blank" class="mdl-button"><i class="material-icons">code</i> See on GitHub</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <script src="js/material.min.js"></script>
+    </body>
+</html>
